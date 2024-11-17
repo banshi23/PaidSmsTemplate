@@ -65,3 +65,13 @@ $(function () {
         $('.body-container').addClass('body-container-bg-blur');
     });
 });
+// Collapse navbar and remove blur when clicking outside
+$(document).on('click', function (event) {
+    const navbar = $('#appNavbar');
+    const navbarCollapse = $('#navbarSupportedContent');
+
+    if (!navbar.is(event.target) && navbar.has(event.target).length === 0 && navbarCollapse.hasClass('show')) {
+        navbarCollapse.collapse('hide'); // Collapse the navbar
+        $('.body-container').removeClass('body-container-bg-blur'); // Remove blur
+    }
+});

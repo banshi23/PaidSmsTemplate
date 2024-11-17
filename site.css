@@ -161,6 +161,7 @@ main {
 }
 .navbar-toggler-icon{
     color: var(--text-color);
+    background-image: none !important;
 }
 .navbar-toggler:has(+ .navbar-collapse.show) .navbar-toggler-icon .bi.bi-list {
     display: none !important;
