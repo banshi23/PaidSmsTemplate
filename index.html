@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaidSMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="~/PaidSMS.styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="app-bg-shadow"></div>
+    <div class="app-bg-img"></div> 
+    <div class="min-vh-100 app-bg login-register">
+        <main role="main" class="vw-100">
+            <nav class="navbar sticky-top navbar-expand-lg" id="appNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Paid SMS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="bi bi-list"></i><i class="bi bi-x"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="ms-3">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Join Channel</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Services
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item theme-button d-flex justify-content-center align-items-center">
+                                    <div class="theme-toggle light-theme" id="themeToggle">
+                                        <p class="title-light-theme m-0">Light Theme</p>
+                                        <p class="title-dark-theme m-0">Dark Theme</p>
+                                    </div>
+                                </li>
+                                <li class="nav-item btn-item">
+                                    <button type="button" id="signUpBtn" class="btn">Sign up</button>
+                                </li>
+                                <li class="nav-item btn-item">
+                                    <button type="button" id="logInBtn" class="btn login-button d-inline-flex justify-content-center">Log-in</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="body-container h-100 w-100 d-flex justify-content-center align-items-center">
+                <!-- #region Register form -->
+                    <div class="form-container px-3 py-2" id="registerForm">
+                        <h2 class="text-center mb-4">Create an account</h2>
+                        <form>
+                            <div class="mb-4">
+                                <label for="email" class="mb-2">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="mb-2">Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                    <span class="input-group-text bi bi-eye-slash fs-3" id="togglePassword" style="cursor: pointer;" />
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="confirm-password" class="mb-2">Confirm Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password">
+                                    <span class="input-group-text bi bi-eye-slash fs-3" id="toggleConfirmPassword" style="cursor: pointer;" />
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="recaptcha">
+                                    <label class="form-check-label" for="recaptcha">
+                                        I'm not a robot
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 p-2 mb-4 btn-login">Create account</button>
+                            <button type="button" class="btn btn-google w-100 p-2 btn-sso"><i class="bi bi-google"></i> Continue with Google</button>
+                        </form>
+                        <p class="text-center mt-3 sign-up-quote">
+                            Already Have An Account? <a href="#" class="text-decoration-none" style="color: rgba(57, 124, 255, 1);">Log In</a>
+                        </p>
+                    </div> 
+                <!-- #endregion -->
+
+                <!-- Login form start -->                 
+                    <div class="form-container px-3 py-2" id="loginForm">
+                        <h2 class="text-center mb-4">Login Account</h2>
+                        <form>
+                            <div class="mb-4">
+                                <label for="email" class="mb-2">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="mb-2">Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                    <span class="input-group-text bi bi-eye-slash fs-3" id="togglePassword" style="cursor: pointer;" />
+                                </div>
+                                <div class="forgot">
+                                    <a class="mt-2" href="#">Forgot Password</a>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="recaptcha">
+                                    <label class="form-check-label" for="recaptcha">
+                                        I'm not a robot
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 p-2 mb-4 btn-login">Login</button>
+                            <button type="button" class="btn btn-google w-100 p-2 btn-sso"><i class="bi bi-google"></i> Continue with Google</button>
+                        </form>
+                        <p class="text-center mt-3 sign-up-quote">
+                            Don't' Have Any Account ? <a href="#" class="text-decoration-none" style="color: rgba(57, 124, 255, 1);">Sign Up</a>
+                        </p>
+                    </div>
+                <!-- Login form end -->
+            </div>
+        </main>
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="site.js"></script>
+    <script>
+         $(document).ready(function () {
+            // Show Register Form
+            $("#signUpBtn").on("click", function () {
+                $("#registerForm").addClass("active");
+                $("#loginForm").removeClass("active");
+                $(".app-bg-shadow, .app-bg-img").hide();
+            });
+
+            // Show Login Form
+            $("#logInBtn").on("click", function () {
+                $("#loginForm").addClass("active");
+                $("#registerForm").removeClass("active");
+                $(".app-bg-shadow, .app-bg-img").hide();
+            });
+
+            // Show login form by default
+            $("#loginForm").addClass("active");
+        });
+    </script>
+</body>
+</html>
